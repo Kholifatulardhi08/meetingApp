@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Drink extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name', 'total'
+    ];
 }
