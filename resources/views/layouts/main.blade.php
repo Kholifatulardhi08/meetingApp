@@ -98,7 +98,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="{{ route('rooms.index') }}">Room</a>
                         <a class="collapse-item" href="{{ route('units.index') }}">Unit</a>
-                        <a class="collapse-item" href="#">Meal</a>
+                        <a class="collapse-item" href="{{ route('meals.index') }}">Meal</a>
                         <a class="collapse-item" href="#">Drink</a>
                     </div>
                 </div>
