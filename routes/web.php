@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\RoomController;
 use App\Http\Controllers\Backend\UnitController;
 use App\Http\Controllers\Backend\MealController;
+use App\Http\Controllers\Backend\DrinkController;
 
 
 
@@ -38,5 +39,6 @@ Route::group(['middleware' => ['auth']], function() {
         Route::resource('rooms', RoomController::class);
         Route::resource('units', UnitController::class);
         Route::resource('meals', MealController::class);
+        Route::resource('drinks', DrinkController::class);
     });
 });
