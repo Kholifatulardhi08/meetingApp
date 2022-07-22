@@ -1,14 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Backend\UserController;
-use App\Http\Controllers\Backend\RoomController;
-use App\Http\Controllers\Backend\UnitController;
-use App\Http\Controllers\Backend\MealController;
-use App\Http\Controllers\Backend\DrinkController;
-use App\Http\Controllers\Backend\BookingController;
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -22,25 +14,7 @@ use App\Http\Controllers\Backend\BookingController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return ['Laravel' => app()->version()];
 });
 
-Auth::routes();
-
-Route::get('/home', function () {
-    return view('home');
-});
-
-//Route::group(['middleware' => ['auth']], function() {
-//    Route::get('/home', function () {
-//        return view('home');
-//    });
-//    Route::middleware(['auth'])->group(function () {
-//        Route::resource('users', UserController::class);
-//        Route::resource('rooms', RoomController::class);
-//        Route::resource('units', UnitController::class);
-//        Route::resource('meals', MealController::class);
-//        Route::resource('drinks', DrinkController::class);
-//        Route::resource('bookings', BookingController::class);
-//    });
-//});
+require __DIR__.'/auth.php';
