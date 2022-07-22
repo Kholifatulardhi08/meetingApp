@@ -31,16 +31,16 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::group(['middleware' => ['auth']], function() {
-    Route::get('/home', function () {
-        return view('home');
-    });
-    Route::middleware(['auth'])->group(function () {
-        Route::resource('users', UserController::class);
-        Route::resource('rooms', RoomController::class);
-        Route::resource('units', UnitController::class);
-        Route::resource('meals', MealController::class);
-        Route::resource('drinks', DrinkController::class);
-        Route::resource('bookings', BookingController::class);
-    });
-});
+//Route::group(['middleware' => ['auth']], function() {
+//    Route::get('/home', function () {
+//        return view('home');
+//    });
+//    Route::middleware(['auth'])->group(function () {
+//        Route::resource('users', UserController::class);
+//        Route::resource('rooms', RoomController::class);
+//        Route::resource('units', UnitController::class);
+//        Route::resource('meals', MealController::class);
+//        Route::resource('drinks', DrinkController::class);
+//        Route::resource('bookings', BookingController::class);
+//    });
+//});
